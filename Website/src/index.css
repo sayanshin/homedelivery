@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bahari-red: #A61B1B;
+  --color-bahari-red-dark: #8A1515;
+  --color-bahari-yellow: #F4B400;
+  --color-bahari-yellow-light: #FADB5F;
+  --color-bahari-cream: #FFF8E7;
+  --color-bahari-brown: #3E2723;
+  --color-bahari-brown-light: #5D4037;
+  
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bahari-cream text-bahari-brown;
+  }
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-panel-dark {
+  background: rgba(62, 39, 35, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bahari-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bahari-red);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-bahari-brown);
+}
